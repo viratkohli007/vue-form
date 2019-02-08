@@ -117,50 +117,60 @@
     		this.second=false
     	},
     	store(){
+
         if(this.fname !="" && this.validName(this.fname)){
         localStorage.setItem('firstName', this.fname)
+        this.hasEr.fname = false
       }else{
         this.abc =1;
         this.hasEr.fname = true
       }
       if (this.lname !="" && this.validName(this.lname)) {
         localStorage.setItem('lastName', this.lname)
+        this.hasEr.lname = false
       }else{
         this.abc = 1
         this.hasEr.lname = true
       }
       if(this.email != "" && this.validEmail(this.email)){
         localStorage.setItem('email', this.email)
+        this.hasEr.email = false
       }else{
         this.abc = 1;
         this.hasEr.email = true
       }
       if(this.mobile !="" && this.phonenumber(this.mobile)){
         localStorage.setItem('mobile no', this.mobile)
+        this.hasEr.mobile = false
       }else{
         this.abc = 1
         this.hasEr.mobile = true
       }
       if(this.bName !="" && this.validName(this.bName)){
         localStorage.setItem('Bank Name', this.bName)
+        this.hasEr.bName = false
       }else{
+         console.log('click')
         this.abc = 2
         this.hasEr.bName = true
       }
       if(this.bBranch !="" && this.validName(this.bBranch)){
         localStorage.setItem('Branch', this.bBranch)
+        this.hasEr.bBranch = false
       }else{
         this.abc = 2
         this.hasEr.bBranch = true
       }
       if(this.ifsc != "" ){
         localStorage.setItem('IFSC', this.ifsc)
+         this.hasEr.ifsc = false
       }else{
         this.abc = 2
         this.hasEr.ifsc = true
       }
       if(this.acc !="" && this.acccVal(this.acc)){
         localStorage.setItem('Account No', this.acc)
+        this.hasEr.acc = false
       }else{
         this.abc = 2
         this.hasEr.acc = true
